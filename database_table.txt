@@ -1,0 +1,11 @@
+CREATE DATABASE fmms;
+USE fmms;
+CREATE TABLE results (
+    id INT NOT NULL AUTO_INCREMENT,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    comment VARCHAR(255) NOT NULL,
+    tokenized_comment VARCHAR(255) NOT NULL,
+    label INT NOT NULL,
+    max_prob FLOAT NOT NULL,
+    PRIMARY KEY (id)
+) DEFAULT CHARSET=utf8;
