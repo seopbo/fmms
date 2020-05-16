@@ -107,8 +107,8 @@ venv.bak/
 .idea
 
 # PyTorch ckpt
-*.tar
-*.bin
+#*.tar
+#*.bin
 
 # Tensorboard
 events.out.tfevents.*
