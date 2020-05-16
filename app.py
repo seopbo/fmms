@@ -39,6 +39,7 @@ def inference():
     sequence = payload.get("comment")
     list_of_tokens = tokenizer.split(sequence)
     list_of_indices = tokenizer.split_and_transform(sequence)
+
     with torch.no_grad():
         score = model(torch.tensor(list_of_indices).unsqueeze(0))
         max_prob, label = [_.item() for _ in torch.softmax(score, dim=-1).max(dim=-1)]
